@@ -143,16 +143,26 @@ classDiagram
 API *-- Result
 Result *-- Name
 Result *-- Picture
-API: Result[] results
-Result: API_Name name
-Result: String email
-Result: Picture picture
-Name: String title
-Name: String first
-Name: String last
-Picture: URL large
-Picture: URL medium
-Picture: URL thumbnail
+
+class API {
+	Result[] results
+	API_Name name
+	String email
+	Picture picture
+}
+
+class Name {
+	String title
+	String first
+	String last
+}
+
+class Picture {
+	URL large
+	URL medium
+	URL thumbnail
+}
+
 ```
 
 | Object  | Field     | Type   | Description |
